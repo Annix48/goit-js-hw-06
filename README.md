@@ -130,3 +130,97 @@ const images = [
 3. Обновляй интерфейс новым значением переменной `counterValue`.
 
 ## Задание 5
+
+Напиши скрипт который, при наборе текста в инпуте `input#name-input` (событие `input`), подставляет его текущее значение в `span#name-output`. Если инпут пустой, в спане должна отображаться строка `"Anonymous"`.
+
+```
+ <input type="text" id="name-input" placeholder="Please enter your name" />
+<h1>Hello, <span id="name-output">Anonymous</span>!</h1>
+```
+
+## Задание 6
+
+Напиши скрипт, который при потере фокуса на инпуте (событие `blur`), проверяет его содержимое на правильное количество введённых символов.
+
+```
+<input
+  type="text"
+  id="validation-input"
+  data-length="6"
+  placeholder="Please enter 6 symbols"
+/>
+```
+
+1. Сколько символов должно быть в инпуте, указывается в его атрибуте data-length.
+2. Если введено подходящее количество символов, то border инпута становится зелёным, если неправильное - красным.
+
+Для добавления стилей, используй CSS-классы `valid` и `invalid`, которые мы уже добавили в исходные файлы задания.
+
+```
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
+```
+
+## Задание 7
+
+Напиши скрипт, который реагирует на изменение значения `input#font-size-control` (событие `input`) и изменяет инлайн-стиль `span#text` обновляя свойство `font-size`. В результате при перетаскивании ползунка будет меняться размер текста.
+
+```
+<input id="font-size-control" type="range" min="16" max="96" />
+<br />
+<span id="text">Abracadabra!</span>
+```
+
+## Задание 8
+
+Напиши скрипт управления формой логина.
+
+```
+<form class="login-form">
+  <label>
+    Email
+    <input type="email" name="email" />
+  </label>
+  <label>
+    Password
+    <input type="password" name="password" />
+  </label>
+  <button type="submit">Login</button>
+</form>
+```
+
+1. Обработка отправки формы form.login-form должна быть по событию submit.
+2. При отправке формы страница не должна перезагружаться.
+3. Если в форме есть незаполненные поля, выводи alert с предупреждением о том, что все поля должны быть заполнены.
+4. Если пользователь заполнил все поля и отправил форму, собери значения полей в обьект, где имя поля будет именем свойства, а значение поля - значением свойства. Для доступа к элементам формы используй свойство elements.
+5. Выведи обьект с введенными данными в консоль и очисти значения полей формы методом reset.
+
+## Задание 9
+
+Напиши скрипт, который изменяет цвета фона элемента `<body>` через инлайн стиль при клике на `button.change-color` и выводит значение цвета в `span.color`.
+
+```
+<div class="widget">
+  <p>Background color: <span class="color">-</span></p>
+  <button type="button" class="change-color">Change color</button>
+</div>
+```
+
+Для генерации случайного цвета используй функцию `getRandomHexColor`.
+
+```
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}
+```
