@@ -24,10 +24,18 @@ const images = [
 
 
 
-for (let el of images)
-  document
-    .querySelector(".gallery")
-    .insertAdjacentHTML(
-      "beforeEnd",
-      `<li><img src="${el.url}" alt="${el.alt}"></li>`
-    );
+// for (let el of images)
+//   document
+//     .querySelector(".gallery")
+//     .insertAdjacentHTML(
+//       "beforeEnd",
+//       `<li><img src="${el.url}" alt="${el.alt}"></li>`
+//     );
+
+const ulEl = document.querySelector(".gallery");
+images.forEach(el => {
+  ulEl.insertAdjacentHTML(
+    'beforeEnd',
+    `<li><img src = "${el.url}" alt = "${el.alt}"  /></li>`,
+  );
+});
