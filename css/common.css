@@ -24,10 +24,11 @@ button {
   cursor: pointer;
 }
 img {
-display: flex;
-align-items: center;
-justify-content: center;
-width: 300px;
+  padding: 15px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 330px;
+  height: 200px;
 }
 ul{
   list-style-type: none;
