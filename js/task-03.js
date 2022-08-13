@@ -13,17 +13,17 @@ const images = [
   },
 ];
 
-// const galleryListEl = document.querySelector("ul");
-// const element = images
-//   .map(function ({ url, alt }) {
-//     return `<li><img src = '${url}' alt = '${alt}' width="320"></li>`;
-//   })
-//   .join("");
-// galleryListEl.insertAdjacentHTML("afterbegin", element);
+const galleryListEl = document.querySelector("ul");
+const element = images
+  .map(function ({ url, alt }) {
+    return `<li><img src = '${url}' alt = '${alt}' width="320"></li>`;
+  })
+  .join("");
+galleryListEl.insertAdjacentHTML("afterbegin", element);
 
 
 
-
+/* Return to DOM 3 times.
 // for (let el of images)
 //   document
 //     .querySelector(".gallery")
@@ -32,10 +32,10 @@ const images = [
 //       `<li><img src="${el.url}" alt="${el.alt}"></li>`
 //     );
 
-const ulEl = document.querySelector(".gallery");
-images.forEach(el => {
-  ulEl.insertAdjacentHTML(
-    'beforeEnd',
-    `<li><img src = "${el.url}" alt = "${el.alt}"  /></li>`,
-  );
-});
+// const ulEl = document.querySelector(".gallery");
+// images.forEach(el => {
+//   ulEl.insertAdjacentHTML(
+//     'beforeEnd',
+//     `<li><img src = "${el.url}" alt = "${el.alt}"  /></li>`,
+//   );
+// });
